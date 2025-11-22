@@ -1,3 +1,4 @@
+// Autores: Diego Padilla, Tomas Sarmiento, Ashley Francisco Pattrick
 readline = require("readline-sync");
 console.log("Hola Mundo");
 
