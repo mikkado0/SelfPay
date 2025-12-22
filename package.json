@@ -1,6 +1,26 @@
 {
+  "name": "selfpay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikkado0/SelfPay.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikkado0/SelfPay/issues"
+  },
+  "homepage": "https://github.com/mikkado0/SelfPay#readme",
   "dependencies": {
-    "express": "^5.1.0",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.11"
   }
 }
