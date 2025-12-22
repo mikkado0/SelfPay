@@ -11,6 +11,22 @@ router.get("/rutaGet", (req, res) => {
   res.send("Hola mundo desde la ruta get");
 });
 
+router.get("/error", (req, res) => {
+  res.status(404).json({
+    error: "Recurso no encontrado",
+  });
+});
+router.get("/listaProductos", (req, res) => {
+  const productos = [
+    { id: 1, nombre: "Laptop", precio: 1200, stock: 5 },
+    { id: 2, nombre: "Mouse", precio: 25, stock: 20 },
+    { id: 3, nombre: "Teclado", precio: 45, stock: 10 },
+  ];
+
+  console.log("Alguien entró a la lista de productos");
+  res.json(productos);
+});
+
 router.get("/registro", (req, res) => {
   console.log("alguien se registro");
   res.send("bienvendio al registro, ¿Con que deseas registrarte?");
