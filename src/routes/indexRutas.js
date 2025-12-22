@@ -29,9 +29,9 @@ router.get("/Scaner", (req, res) => {
 });
 router.get("/Carrito", (req, res) => {
   console.log("alguien entro a su carrito de compras");
-  res.send(
-    "Elige el metodo de pago para finalizar tu compra o ¿quieres seguir comprando?"
-  );
+  res.json({
+    Elige: "Metodo de pago para finalizar tu compra o ¿quieres seguir comprando?",
+  });
 });
 
 module.exports = router;
