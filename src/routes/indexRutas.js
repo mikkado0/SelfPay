@@ -74,5 +74,19 @@ router.post("/testPOST3", (req, res) => {
   req.body = "Tercera ruta POST";
   console.log("Enviada una peticion post");
 });
+router.post("/productosPOT", (req, res) => {
+  const nuevoProducto = req.body;
+  console.log("Producto recibido:", nuevoProducto);
+  res.status(201).json({
+    message: "Producto creado exitosamente",
+    producto: nuevoProducto,
+  });
+});
+Router.post("/finalizarCompra", (req, res) => {
+  console.log("Alguien finalizo su compra");
+  res.json({
+    mensaje: "Gracias por tu compra, ¿Deseas recibir el recibo por correo?",
+  });
+});
 
 module.exports = router;
