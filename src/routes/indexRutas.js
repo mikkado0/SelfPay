@@ -61,4 +61,14 @@ router.post("/holaPOST", (req, res) => {
   });
 });
 
+router.post("/testPOST2", (req, res) => {
+  req.body =
+  console.log("Enviada una peticion post");
+  console.log(req.body);
+  res.json({
+    Title: "Peticion POST 2",
+  });
+});
+
+
 module.exports = router;
