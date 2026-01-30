@@ -46,13 +46,14 @@ router.get("/Scaner", (req, res) => {
 router.get("/Carrito", (req, res) => {
   console.log("alguien entro a su carrito de compras");
   res.json({
-    Elige: "Metodo de pago para finalizar tu compra o ¿quieres seguir comprando?",
+    Elige:
+      "Metodo de pago para finalizar tu compra o ¿quieres seguir comprando?",
   });
 });
 
 router.post("/holaPOST", (req, res) => {
   req.body =
-  "En el request body guardaremos los datos de los formularios para enviarlos a la base de datos";
+    "En el request body guardaremos los datos de los formularios para enviarlos a la base de datos";
 
   console.log("Enviada una peticion post");
   console.log(req.body);
@@ -62,13 +63,29 @@ router.post("/holaPOST", (req, res) => {
 });
 
 router.post("/testPOST2", (req, res) => {
-  req.body =
-  console.log("Enviada una peticion post");
+  req.body = console.log("Enviada una peticion post");
   console.log(req.body);
   res.json({
     Title: "Peticion POST 2",
   });
 });
-
+router.post("/POSTproductos", (req, res) => {
+  req.body =
+    "guardaremos los datos de los productos para enviarlos a la base de datos";
+  console.log("Enviada una peticion post de productos");
+  console.log(req.body);
+  res.json({
+    Title: "Producto guardado correctamente",
+  });
+});
+router.post("/POSTregistro", (req, res) => {
+  req.body =
+    "guardaremos los datos de registro para enviarlos a la base de datos";
+  console.log("Enviada una peticion post de registro");
+  console.log(req.body);
+  res.json({
+    Title: "Usuario registrado correctamente",
+  });
+});
 
 module.exports = router;
