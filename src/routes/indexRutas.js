@@ -70,5 +70,11 @@ router.post("/testPOST2", (req, res) => {
   });
 });
 
+router.post("/testPOST3", (req, res) => {
+  req.body =
+      "Tercera ruta POST";
+  console.log("Enviada una peticion post");
+});
+
 
 module.exports = router;
