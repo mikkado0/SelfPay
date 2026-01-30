@@ -50,4 +50,15 @@ router.get("/Carrito", (req, res) => {
   });
 });
 
+router.post("/holaPOST", (req, res) => {
+  req.body =
+  "En el request body guardaremos los datos de los formularios para enviarlos a la base de datos";
+
+  console.log("Enviada una peticion post");
+  console.log(req.body);
+  res.json({
+    Title: "Probando cosas con un POST",
+  });
+});
+
 module.exports = router;
