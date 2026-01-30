@@ -69,23 +69,10 @@ router.post("/testPOST2", (req, res) => {
     Title: "Peticion POST 2",
   });
 });
-router.post("/POSTproductos", (req, res) => {
-  req.body =
-    "guardaremos los datos de los productos para enviarlos a la base de datos";
-  console.log("Enviada una peticion post de productos");
-  console.log(req.body);
-  res.json({
-    Title: "Producto guardado correctamente",
-  });
-});
-router.post("/POSTregistro", (req, res) => {
-  req.body =
-    "guardaremos los datos de registro para enviarlos a la base de datos";
-  console.log("Enviada una peticion post de registro");
-  console.log(req.body);
-  res.json({
-    Title: "Usuario registrado correctamente",
-  });
+
+router.post("/testPOST3", (req, res) => {
+  req.body = "Tercera ruta POST";
+  console.log("Enviada una peticion post");
 });
 
 module.exports = router;
